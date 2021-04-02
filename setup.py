@@ -5,7 +5,10 @@ Usage:
     python setup.py py2app
 """
 
-from setuptools import setup
+from setuptools import setup, find_packages
+
+with open('requirements.txt') as f:
+    required_packages = f.read().splitlines()
 
 APP = ['my_application.py']
 DATA_FILES = []
@@ -16,4 +19,5 @@ setup(
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
+    install_requires=required_packages
 )
