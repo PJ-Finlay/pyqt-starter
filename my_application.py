@@ -7,5 +7,5 @@ from PyQt5.QtCore import *
 app = QApplication([])
 window = QMainWindow()
 window.show()
-self.app.exec_()
+app.exec_()
 
